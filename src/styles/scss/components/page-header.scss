@@ -1,0 +1,41 @@
+.page-header{
+    @apply bg-gray-900;
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-img{
+    position: absolute;
+    right: 1.5vw;
+    bottom:0;
+    transform:translateY(15%);
+    width: 32rem;
+    max-width: 100%;
+    z-index: 15;
+    &-big{
+        transform:translateY(10%);
+        width: 38rem;
+
+        @include res(xl){
+            width: 35rem;
+        }
+
+        @include res(lg){
+            margin-bottom:-22rem !important;
+        }
+    }
+
+    @include res(lg){
+        position: relative;
+        margin: -2rem auto -11rem;
+        transform:translateY(0);
+    }
+}
+
+.bg-circle{
+background: url(/assets/img/bg-circle.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: bottom;
+}

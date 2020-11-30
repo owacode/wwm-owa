@@ -1,0 +1,36 @@
+//colors
+
+$color-primary:#1A91FF;
+$color-secondary:#69EA9D;
+$color-dark:#10263e;
+$color-darker: #202020;
+
+//MEDIA QUERY MANAGER - (takes the size of the screen and return the media query code)
+@mixin res($break-point){
+
+    @if $break-point == xl {
+        @media (max-width:1279px) { // --1199.98px (large screens - eg. small laptops or landscape tablets) <1200
+            @content
+        };
+    }
+    @if $break-point == lg {
+        @media (max-width:1023px) { // --1199.98px (large screens - eg. small laptops or landscape tablets) <1200
+            @content
+        };
+    }
+    @if $break-point == md {
+        @media (max-width:767px) { // --991.98px (medium screens - eg. tablets) <992
+            @content
+        };
+    }
+    @if $break-point == sm {
+        @media (max-width:639px) { // --767.98px (small screens - eg. landscape phones) <768
+            @content
+        };
+    }
+    @if $break-point == xs {
+        @media (max-width:379px) { // --575.98px (very small screens - eg. potrait phones) <576
+            @content
+        };
+    }
+}

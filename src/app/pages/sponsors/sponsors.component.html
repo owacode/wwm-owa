@@ -1,0 +1,36 @@
+<section class="section page-header pb-80">
+    <div class="container">
+      <h1 class="h1 lg:text-center text-white mb-8">Meet our sponsors</h1>
+      <p class="font-medium lg:text-center text-gradient lg:mx-auto max-w-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+        vitae, sed dolorum, quo reiciendis, tempora dicta recusandae accusamus
+        velit est asperiores aut porro veniam aspernatur.
+      </p>
+    </div>
+  
+    <img src="assets/img/sponsors-img.png" class="header-img" alt="" />
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div
+        class="bg-white mx-auto rounded-2xl shadow-xl py-12 px-16 md:px-8 -m-48 mb-20"
+      >
+      <div class="grid items-center grid-cols-6 gap-x-12 gap-y-20 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
+        <a
+          [href]="item?.link"
+          class="sponsor"
+          target="_blank"
+          *ngFor="let item of sponsors"
+          [title]="item?.link"
+        >
+          <img [src]="item?.logo" [alt]="item?.link" />
+        </a>
+      </div>
+      <div class="text-center mt-10">
+        <a class="link-gradient" routerLink="/sponsor-plans">Become a sponsor</a>
+      </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,138 @@
+
+  <header class="fo cd cm du hb hz hk" [class.header-transparent]="transparent">
+    <div class="max-w-7xl i_ uz pj">
+      <div class="np nw nq rm dy">
+        
+          <a class="logo"
+               routerLink="/">
+             <img src="assets/img/wwm-owa.png" alt="logo">
+              </a>
+        <nav class=" df dv">
+          <ul class="np rt n_ ny nw lg:hidden">
+            <li>
+              <a class="nav-link px-4 lg:px-2"
+                  routerLink="/track">Tracks</a>
+            </li>
+            <li>
+              <a class="nav-link px-4 lg:px-2"
+              routerLink="/speakers">Speakers</a>
+            </li>
+            <li>
+              <a class="nav-link px-4 lg:px-2"
+              routerLink="/sponsors">Sponsors</a>
+            </li>
+            
+            <li>
+              <a class="nav-link px-4 lg:px-2"
+              routerLink="/committees">Committees</a>
+            </li>
+            <li>
+              <a class="nav-link px-4 lg:px-2"
+              routerLink="/events">Events</a>
+            </li>
+            <li>
+              <a class="nav-link px-4 lg:px-2"
+              routerLink="/sponsor-plans">Become a sponsor</a>
+            </li>
+            <li>
+              <a class="nav-link px-4 lg:px-2"
+              routerLink="/contact">Contact</a>
+            </li>
+          </ul>
+         
+        </nav>
+
+        <div class="flex items-center">
+          <ul class="rt n_ ny nw lg:mr-6">
+            <li>
+              <a class="f ls j ts sp" [class.btn-gradient]="!hamBlack"
+                  href="signup.html"><span>Register Now</span></a>
+            </li>
+          </ul>
+          
+          <div class="np hidden lg:block">
+        
+            <button aria-controls="mobile-nav"
+            (click)="toggleMenu()"
+                 class="l ham" [class.ham-black]="hamBlack"><span class="y">Menu</span> <svg class="ci rp fj lc"
+                 viewbox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+            <rect height="2"
+                  width="24"
+                  y="4"></rect>
+            <rect height="2"
+                  width="24"
+                  y="11"></rect>
+            <rect height="2"
+                  width="24"
+                  y="18"></rect></svg></button>
+            <nav class="fu fy rx a_ cv fp cd ua bg-white hy hz hk"
+                 id="mobile-nav"
+                 x-show="expanded">
+              <ul class="uz ub">
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/">Home</a>
+                </li>
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/speakers">Speakers</a>
+                </li>
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/sponsors">Sponsors</a>
+                </li>
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/committees">Committees</a>
+                </li>
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/events">Events</a>
+                </li>
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/sponsor-plans">Sponsor Plans</a>
+                </li>
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/track">Tracks</a>
+                </li>
+                <!-- <li class="ub iv nu na tk">
+                  <span class="np la lb ub font-medium text-black">Tracks</span>
+                  <ul class="al">
+                    <li>
+                      <a class="r_ np ro la lb ub"
+                          href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                      <a class="r_ np ro la lb ub"
+                          href="support.html">Support center</a>
+                    </li>
+                    <li>
+                      <a class="r_ np ro la lb ub"
+                          href="404.html">404</a>
+                    </li>
+                  </ul>
+                </li> -->
+                <li>
+                  <a class="np la lb ub font-medium text-black"
+                  routerLink="/contact">Contact</a>
+                </li>
+                <!-- <li>
+                  <a class="f ls j ts cd iv"
+                      href="signup.html"><span>Sign up</span> <svg class="cn rc fj lu rn sf os"
+                       viewbox="0 0 12 12"
+                       xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+                        fill="#999"
+                        fill-rule="nonzero"></path></svg></a>
+                </li> -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </header>

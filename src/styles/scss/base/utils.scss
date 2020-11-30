@@ -1,0 +1,17 @@
+.container{
+    @apply px-6;
+    @apply max-w-7xl; 
+    @apply mx-auto;
+    @apply px-4;
+    @apply relative;
+}
+
+.section{
+    @apply py-20;
+    @apply relative;
+    
+}
+
+.bg-gradient{
+    background: linear-gradient(to bottom right, $color-primary, $color-secondary);
+}

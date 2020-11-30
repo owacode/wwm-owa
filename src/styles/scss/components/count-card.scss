@@ -1,0 +1,23 @@
+.count{
+&-card{
+    @apply w-28;
+    @apply h-28;
+    @apply shadow-lg;
+    @apply p-1;
+    @apply mx-auto;
+    @apply mt-8;
+    @apply rounded-full;
+    background-image:linear-gradient(to bottom right, $color-primary, $color-secondary);
+
+    &-inner{
+        @apply shadow-xl;
+        background-image: linear-gradient(to bottom right, $color-dark, $color-darker);
+        @apply p-6;
+        @apply rounded-full;
+    }
+}
+&-content{
+    @apply pt-2;
+    @apply text-center;
+}
+}

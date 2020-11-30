@@ -1,0 +1,46 @@
+.text{
+    &-gradient{
+        background: linear-gradient(to right,$color-primary, $color-secondary) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    }
+
+}
+
+p{
+    @apply text-gray-900;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem !important;
+}
+
+.link-gradient{
+    @apply font-bold;
+    @apply relative;
+    @apply z-10;
+    @apply px-4;
+    @apply py-2;
+    @apply text-xl;
+    @apply transition-all; @apply duration-100; @apply ease-in-out;
+    &:after{
+        position: absolute;
+        content: "";
+        height: 0.2rem;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.5rem;
+        @apply transition-all; @apply duration-100; @apply ease-in-out;
+        background-image:linear-gradient(to right, $color-primary, $color-secondary);
+    }
+
+    &:hover{
+        @apply text-white;
+        
+        &:after{
+            height: 100%;
+        }
+    }
+}
+

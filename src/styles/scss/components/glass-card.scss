@@ -1,0 +1,21 @@
+.glass-card{
+    @apply relative;
+    @apply rounded-xl;
+    @apply shadow-lg;
+    overflow: hidden;
+   background:inherit;
+
+    &::before{
+            content: "";
+             @apply absolute;
+            background: inherit;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            @apply rounded-lg;
+            filter: blur(10px);
+            margin: -20px;
+    }
+}

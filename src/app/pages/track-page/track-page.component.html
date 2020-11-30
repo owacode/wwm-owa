@@ -1,0 +1,84 @@
+<section class="section page-header page-header-big">
+    <div class="container">
+      <h1 class="h1 lg:text-center text-white lg:text-center lg:mx-auto max-w-2xl mb-8"> Waste and WasteWater (One Water Resilience)</h1>
+      <p class="font-medium lg:text-center text-gradient lg:mx-auto max-w-xl">
+        Here comes the summary of the track
+      </p>
+    </div>
+  
+    <img src="assets/img/sponsors-img.png" class="header-img header-img-big" alt="" />
+
+
+    <img src="assets/img/wave.svg" alt="wave" class="wave">
+  </section>
+  
+  <section class="pb-16 -mt-4 bg-circle">
+    <div class="container">
+      <div class="grid grid-cols-6 gap-8">
+        <div class="col-span-4 lg:col-span-6">
+          <h2 class="h2 text-gradient pb-4 borber-b mb-8">
+            About the track
+          </h2>
+   
+          <p class="max-w-4xl">
+           India has the second largest population in the world and faces a water and sanitation crisis. Water.org estimates that more than 163 million people still lack access to clean water, >210 million people lack access to improved sanitation, a staggering 522 million still practice open defecation which in turn contributes to more than 500 children under the age of five dying each day from diarrhea in India. It is estimated by the World Bank that 21% of communicable diseases in India are linked to unsafe water and the lack of hygiene practices.
+           <br><br>
+           After two consecutive years of weak monsoons, 600 million peopleof the country’s population face high to extreme water stress.According to the Composite Water ManagementIndex (CWMI)reportreleased by the Niti Aayog in 2018, 21 major cities (Delhi, Bengaluru, Chennai, Hyderabad and others) are racing to reach zero groundwater levels by 2020, affecting access for 100 million people.However, 12 per cent of India’s population is already living with the No Waterscenario, thanks to excessive groundwater pumping, an inefficient and wasteful water management system and years of deficient rains. TheCWMI report also states that by 2030, the country’s water demand is projected to be twice the available supply, implying severe water scarcity for hundreds of millions of people and an eventualsix per cent loss in the country’s GDP. Although there has been some progress made in the past decade, almost 70% of wastewater in India is still not treated. With proper planning and investment, this represents a great opportunity to reclaim water for reuse and alleviate the water and sanitation crisis.
+           <br><br>
+           The Union government recently formed a new Jal Shakti (water) ministry, which aims attackling water issues with a holistic and integrated perspective on the subject. The ministry has announced an ambitious plan to provide piped water connections to every household in India by 2024.The ministry has set a tough target at a time when hundreds of millions don’t have access to clean water. In addition, the two moot questions are: What will happen if there is no water to supply? What will happen to all the wastewater that gets generated?At present several Metropolitan cities have wastewater treatment facilities that can potentially treat up to 60% of generated sewage, but lack properly trained staff and resources to operate these facilities. Almost all other Municipalities and Villages do not have wastewater treatment facilities even in the planning stage.
+          </p>
+        </div>
+      <div class="col-span-2 lg:col-span-6">
+        <h3 class="h3 tracking-tighter pb-4 borber-b mb-8">
+          Themes for the track
+        </h3>
+
+        <div class="theme-item flex mb-4 ">
+          <img src="assets/img/bullet.png" alt="" class="bullet">
+          <p>
+            Drinking water in Rural and Urban India – challenges and solutions
+          </p>
+        </div>
+        <div class="theme-item flex mb-4 ">
+          <img src="assets/img/bullet.png" alt="" class="bullet">
+          <p>
+            Drinking water in Rural and Urban India – challenges and solutions
+          </p>
+        </div>
+        <div class="theme-item flex mb-4 ">
+          <img src="assets/img/bullet.png" alt="" class="bullet">
+          <p>
+            Drinking water in Rural and Urban India – challenges and solutions
+          </p>
+        </div>
+        <div class="theme-item flex mb-4 ">
+          <img src="assets/img/bullet.png" alt="" class="bullet">
+          <p>
+            Drinking water in Rural and Urban India – challenges and solutions
+          </p>
+        </div>
+      </div>
+      </div>
+     
+     
+    </div>
+  </section>
+
+  <section class="section speakers border-t border-b bg-gray-100">
+    <div class="container">
+      <h2 class="h2 text-center mb-16">Speakers for the track</h2>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers | slice: 0:4"
+        ></speaker>
+      </div>
+      <div class="text-center mt-10">
+        <button class="link-gradient">See all speakers</button>
+      </div>
+    </div>
+  </section>
+
+
+  

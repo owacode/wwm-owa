@@ -1,0 +1,20 @@
+
+.img-abs{
+    position: absolute;
+    opacity: 0.2;
+
+    transform: rotateY(180deg);
+    &-1{
+        top: 0;
+        left: 0;
+        width: 12rem;
+    }
+    &-2{
+        bottom: 0;
+        right: 0;
+        width: 7rem;
+    }
+}
+
+
+

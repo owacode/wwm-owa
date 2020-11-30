@@ -1,0 +1,89 @@
+import { Injectable } from "@angular/core";
+
+@Injectable({
+  providedIn: "root",
+})
+export class Sponsors {
+    data = [
+        {
+           link:"http://www.erc.uic.edu/",
+           logo:"assets/img/sponsors/erc.jfif" 
+        },
+        {
+            link:"https://www.usagroundwater.com/",
+            logo:"assets/img/sponsors/ags.jpg" 
+         },
+         {
+            link:"https://www.gore.com/products/gore-cover-for-organic-waste-treatment",
+            logo:"assets/img/sponsors/gore.jpg" 
+         },
+         {
+            link:"https://www.eptri.com/",
+            logo:"assets/img/sponsors/eptri-logo.jpg" 
+         },
+         {
+            link:"https://ftcci.in/",
+            logo:"assets/img/sponsors/FTCCI-logo.jpg" 
+         },
+         {
+            link:"https://ftcci.in/",
+            logo:"assets/img/sponsors/ghmc-logo.jpg" 
+         },
+         {
+            link:"https://globalwaterworks.org/",
+            logo:"assets/img/sponsors/gww.jpg" 
+         },
+         {
+            link:"https://www.hyderabadwater.gov.in/en/",
+            logo:"assets/img/sponsors/hmwssb-logo.jpg" 
+         },
+         {
+            link:"http://kbrinfra.com/infratech/home.html",
+            logo:"assets/img/sponsors/kbrinfra-infratech-logo.jpg" 
+         },
+         {
+            link:"https://www.nsf.org/",
+            logo:"assets/img/sponsors/nsf.jpg" 
+         },
+         {
+            link:"http://shanthavasanthatrust.org/",
+            logo:"assets/img/sponsors/svt.jpg" 
+         },
+         {
+            link:"https://www.rowfoundation.org/",
+            logo:"assets/img/sponsors/rivers-of-the-world.jpg" 
+         },
+         {
+            link:"https://www.rowfoundation.org/",
+            logo:"assets/img/sponsors/us-india-chamber.jpg" 
+         },
+         {
+            link:"https://www.senryo.com/",
+            logo:"assets/img/sponsors/senryo.jpg" 
+         },
+         {
+            link:"https://bharathitheertha.org/",
+            logo:"assets/img/sponsors/bhartiya-theertha.jpg" 
+         },
+         {
+            link:"http://www.chicagoandhra.org/",
+            logo:"assets/img/sponsors/chicago-andhra.jpg" 
+         },
+         {
+            link:"http://ctwt.us/",
+            logo:"assets/img/sponsors/ctwt.jpg" 
+         },
+         {
+            link:"https://www.iacsinfo.org/",
+            logo:"assets/img/sponsors/indo-american-comm.jpg" 
+         },
+         {
+            link:"https://americanteluguassociation.org/",
+            logo:"assets/img/sponsors/american-telugu.jpg" 
+         },
+         {
+            link:"https://www.sync-power.com/",
+            logo:"assets/img/sponsors/sync-it.jpg" 
+         },
+    ]
+}

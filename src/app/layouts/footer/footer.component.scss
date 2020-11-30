@@ -1,0 +1,36 @@
+.logo{
+    img{
+        
+        filter: brightness(0) invert(1);
+    }
+}
+.footer{
+    &-heading{
+        @apply font-bold;
+        margin-bottom: 1.5rem;
+        @apply text-xl;
+        padding-bottom: 1rem;
+        border-bottom: 0.2px solid rgba(255, 255, 255, 0.096);
+    }
+
+    &-link{
+        @apply font-normal;
+        @apply transition-all;
+        @apply text-gray-400;
+        
+        &:hover{
+            @apply text-white;
+        }
+
+        i.material-icons{
+            transform: translateY(30%);
+        }
+    }
+
+    
+}
+
+.copyright{
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.438);
+}

@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>WwmOwaConference</title>
+  <title>Waste and Water Management</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<!--lazy loaded vendor styles-->
+<link rel="preload" as="style" type="text/css" href="./styles/vendors/owl.carousel.min.css" onload="this.rel='stylesheet'" /> 
+<noscript ><link rel="stylesheet" href="./styles/vendors/owl.carousel.min.css"/></noscript> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<!-- <link rel="stylesheet" href="./styles/vendors/icofont/icofont.min.css"> -->
 </head>
 <body>
-  <app-root></app-root>
+  <div class="np ng ue uu">
+    <app-root></app-root>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script defer src="./scripts/owl-carousel.min.js"></script>
+  </div>
 </body>
 </html>

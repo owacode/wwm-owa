@@ -1,0 +1,45 @@
+.modal{
+    padding:2rem;
+    animation: fade_up 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); 
+    &-dialog{
+        margin: 0 auto;
+    }
+    &-content{
+        box-shadow: 0 1rem 2.4rem $card-shadow-color-1;
+        border-radius: 2rem;
+        background: linear-gradient(180deg, $color-white,$color-light-gray-1);
+        padding: 1.5rem 2rem;
+        border:none;
+        animation: modal_show 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    }
+
+    &-backdrop{
+    opacity:0.98 !important;
+    background-color: #D2D2D2;
+}
+    &-title{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+
+        @include responsive(sm){
+            font-size: 2.2rem;
+        }
+
+        @include responsive(xs){
+            font-size: 2.4rem;
+        }
+    }
+    .close{
+        background-color: transparent;
+        color: $color-black;
+    }
+}
+
+
+// .dash{
+//     .modal{
+//         font-family: Nunito Sans;
+//     }
+// }

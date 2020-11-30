@@ -1,0 +1,19 @@
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+  
+    @include res(lg){
+        font-size: 15px 
+    }
+    @include res(sm){
+        font-size: 14px; 
+    }
+    @include res(xs){
+       font-size: 13px; 
+    }
+}
+
+img{
+    width:100%;
+    max-width: 100%;
+}
