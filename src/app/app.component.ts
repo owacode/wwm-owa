@@ -34,9 +34,12 @@ export class AppComponent implements OnInit {
   checkBG() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (event['url'] == '/sponsor-plans') {this.transparent = this.hamBlack = true;}
-        if(event['url'] == '/') {this.hamBlack = true;}
-        else{ this.transparent = false;this.hamBlack = false;}
+        if (event['url'] == '/sponsor-plans') {this.transparent = true;}
+        else{
+          this.transparent = false;
+        }
+        if(event['url'] == '/' || event['url'] == '/sponsor-plans') {this.hamBlack = true;}
+        else{ this.hamBlack = false;}
       }
     });
   }

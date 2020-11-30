@@ -23,9 +23,8 @@ export class HeaderComponent implements OnInit {
       }
     });
 
-    $('.nav-link').click(function() {
-      $('#mobile-nav').removeClass('show');
-    });
+
+    $(".nav-link-mobile").click(this.toggleMenu);
   }
 
   toggleMenu(){

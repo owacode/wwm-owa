@@ -1,12 +1,13 @@
 .btn{
     @apply px-6;
-    @apply py-3;
+    @apply py-4;
     @apply rounded;
     @apply bg-blue-600;
     @apply text-white;
     @apply font-semibold;
     @apply transition-colors;
-
+    @apply inline-block;
+    @apply text-center;
     &-dark{
         @apply bg-gray-900;
 
