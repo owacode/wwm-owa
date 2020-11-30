@@ -10,9 +10,10 @@
         <nav class=" df dv">
           <ul class="np rt n_ ny nw lg:hidden">
             <li class="relative">
-              <a class="nav-link cursor-pointer px-4 lg:px-2 dropdown-btn"
-                  >Tracks</a>
-                  <div class="dropdown absolute w-96 bg-white p-4 rounded shadow-xl top-12 left-0">
+              <a class="nav-link pb-8  cursor-pointer px-4 lg:px-2 dropdown-btn"
+                  >Tracks
+                </a>
+                  <div class="dropdown absolute w-96 bg-white p-4 rounded shadow-xl top-8 left-0">
                     <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors"> <img src="assets/img/icons/tide.svg" class="w-8 mr-2" alt=""> Waste and WasteWater (One Water Resilience)</a>
                     <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors"> <img src="assets/img/icons/female.svg" class="w-8 mr-2" alt=""> Women in WWM</a>
                     <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors">  <img src="assets/img/icons/sugar-cane.svg" class="w-8 mr-2" alt=""> WWM in Agriculture</a>
@@ -83,53 +84,86 @@
                  x-show="expanded">
               <ul class="uz ub">
                 <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/">Home</a>
                 </li>
-                <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+
+                
+                <!-- <li>
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/track">Tracks</a>
-                </li>
+                </li> -->
                 <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/speakers">Speakers</a>
                 </li>
                 <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/sponsors">Sponsors</a>
                 </li>
                 <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/committees">Committees</a>
                 </li>
                 <!-- <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/events">Events</a>
                 </li> -->
                 <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/sponsor-plans">Sponsor Plans</a>
                 </li>
               
-                <!-- <li class="ub iv nu na tk">
-                  <span class="np la lb ub font-medium text-black text-xl nav-link-mobile">Tracks</span>
+                <li class="ub iv nu na tk">
+                  <span class="np la lb ub font-medium text-black nav-link-mobile">Tracks</span>
                   <ul class="al">
-                    <li>
-                      <a class="r_ np ro la lb ub"
-                          href="documentation.html">Documentation</a>
-                    </li>
-                    <li>
-                      <a class="r_ np ro la lb ub"
-                          href="support.html">Support center</a>
-                    </li>
-                    <li>
-                      <a class="r_ np ro la lb ub"
-                          href="404.html">404</a>
-                    </li>
+                    <div class="grid grid-cols-2 sm:grid-cols-1">
+                      <div>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                              routerLink="/track">
+                              <img src="assets/img/icons/tide.svg" class="w-6 mr-2" alt="">
+                              Waste and WasteWater (One Water Resilience)</a>
+                        </li>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                          routerLink="/track"> <img src="assets/img/icons/female.svg" class="w-8 mr-2" alt=""> Women in WWM</a>
+                        </li>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                               routerLink="/track"><img src="assets/img/icons/sugar-cane.svg" class="w-8 mr-2" alt=""> WWM in Agriculture</a>
+                        </li>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                               routerLink="/track"><img src="assets/img/icons/sprinkler.svg" class="w-8 mr-2" alt=""> WASH (Water Sanitation and Hygiene)</a>
+                        </li>
+                      </div>
+                      <div>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                               routerLink="/track"><img src="assets/img/icons/sugar-cane.svg" class="w-8 mr-2" alt=""> WWM in Agriculture</a>
+                        </li>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                               routerLink="/track"> <img src="assets/img/icons/clean.svg" class="w-8 mr-2" alt="">Solid Waste</a>
+                        </li>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                               routerLink="/track"> <img src="assets/img/icons/laptop.svg" class="w-8 mr-2" alt="">  Digital Water (IT/IoT)</a>
+                        </li>
+                        <li>
+                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
+                               routerLink="/track"> <img src="assets/img/icons/employment.svg" class="w-8 mr-2" alt="">  Business Groups</a>
+                        </li>
+                      </div>
+                    </div>
+                  
+                   
                   </ul>
-                </li> -->
+                  
+                </li>
                 <li>
-                  <a class="np la lb ub font-medium text-black text-xl nav-link-mobile"
+                  <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/contact">Contact</a>
                 </li>
                 <!-- <li>

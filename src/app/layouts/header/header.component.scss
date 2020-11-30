@@ -49,12 +49,17 @@
 
 .dropdown{
   display: none;
-  &-btn{
-    &:hover{
+  animation: fade_up 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); 
+  &-btn:hover{
       & + .dropdown{
         display: block;
       }
-    }
+  }
+}
+
+.dropdown{
+  &:hover{
+    display: block;
   }
 }
 
@@ -103,5 +108,18 @@ header {
     width: auto;
     @apply transition-all;
     filter: brightness(0) invert(1);
+  }
+}
+
+@keyframes fade_up{
+  from{
+      display: none;
+      opacity: 0;
+      transform: translateY(0.5rem);
+  }
+  to{
+      display:block;
+      opacity: 1;
+      transform: translateY(0);
   }
 }
