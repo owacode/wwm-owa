@@ -1,7 +1,8 @@
 <div class="shadow-xl rounded-2xl bg-white px-4 py-4 border border-gray-200 speaker flex h-full bg-gradient-to-r from-teal-400 to-blue-500"
 >
-<div class="flex w-full text-center justify-between flex-col text-center">
+<div class="flex w-full justify-between flex-col text-center">
     <div>
+    
       <div class="img-wrap w-40 h-40 mb-4 mx-auto">
         <img
         class="bg-white w-full h-full mx-auto object-cover shadow-xl rounded-full"
@@ -15,13 +16,20 @@
  
  
   <div class="flex justify-between mt-4 pt-3 border-t">
+    <div class="flex justify-center items-center">
+      <img src="assets/img/icons/india.svg" class="w-6 mr-2 block" alt="indian" *ngIf="speaker?.country === 'IN'">
+      <img src="assets/img/icons/usa.svg" class="w-6 mr-2 block" alt="american" *ngIf="speaker?.country === 'US'">
+      <h6>
+        Speaker
+      </h6>
+    </div>
     <a class="mx-2 font-semibold text-gray-600" href="#0">
-     <img src="assets/img/icons/icons8-twitter.svg" class="icon-text" alt="twitter">
-     Twitter
-    </a>
-    <a class="mx-2 font-semibold text-gray-600" href="#0">
-      <img src="assets/img/icons/icons8-linkedin.svg" class="icon-text" alt="twitter">
+
+      
+      <img src="assets/img/icons/icons8-linkedin.svg" class="icon-text -mt-1" alt="twitter">
         LinkedIn</a>
+
+      
   </div>
 </div>
 </div>

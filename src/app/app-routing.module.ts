@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/speakers/speakers.module').then(m => m.SpeakersModule)
   },
   {
-    path:'track',
+    path:'track/:type',
     loadChildren: () => import('./pages/track-page/track-page.module').then(m => m.TrackPageModule)
   },
   {
@@ -31,6 +31,11 @@ const routes: Routes = [
     path:'contact',
     loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
   },
+  {
+    path:'**',
+    redirectTo:'/',
+    pathMatch:'full'
+  }
 ];
 
 @NgModule({

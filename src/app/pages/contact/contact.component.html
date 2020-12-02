@@ -24,7 +24,7 @@
               Contact us directly
             </h2>
           </div>
-          <form class="ok i_">
+          <form class="ok i_" [formGroup]="form" (submit)="submit()"> 
             <div class="np ny se sm">
               <div class="cd vw uk sm d_">
                 <label class="nc ll r_ ro si" for="first-name"
@@ -33,11 +33,23 @@
                 <input
                   id="first-name"
                   class="n cd ll"
+                  formControlName="firstname"
                   placeholder="Enter your first name"
                   required=""
                   style="outline: none"
                 />
+
+                <!-- <div
+                class="validation"
+                *ngIf="submitted && form.get('firstname').invalid"
+              >
+                <p *ngIf="form.get('firstname').errors.required">
+                  Please enter your first name!
+                </p>
+               
+              </div> -->
               </div>
+            
               <div class="cd vw uk">
                 <label class="nc ll r_ ro si" for="last-name"
                   >Last Name <span class="lh">*</span></label
@@ -45,11 +57,24 @@
                 <input
                   id="last-name"
                   class="n cd ll"
+                  formControlName="lastname"
                   placeholder="Enter your last name"
                   required=""
                   style="outline: none"
                 />
+                <!-- <div
+                class="validation"
+                *ngIf="submitted && form.get('lastname').invalid"
+              >
+                <p *ngIf="form.get('lastname').errors.required">
+                  Please enter your last name!
+                </p>
+               
+              </div> -->
               </div>
+
+             
+
             </div>
             <div class="np ny se sm">
               <div class="cd uk">
@@ -60,24 +85,52 @@
                   id="email"
                   type="email"
                   class="n cd ll"
+                  formControlName="email"
                   placeholder="Enter your email address"
                   required=""
                   style="outline: none"
                 />
+
+                <!-- <div
+            class="validation"
+            *ngIf="submitted && form.get('email').invalid"
+            class="validation"
+          >
+            <p *ngIf="form.get('email').errors('required')">
+              Please enter email!
+            </p>
+            <p *ngIf="form.get('email').errors('email')">
+              Please enter a valid email!
+            </p>
+          </div> -->
               </div>
             </div>
 
             <div class="np ny se sm">
               <div class="cd uk">
-                <label class="nc ll r_ ro si" for="message">Message</label>
+                <label class="nc ll r_ ro si" for="message">Message <span class="lh">*</span> </label>
                 <textarea
                   id="message"
                   rows="4"
                   class="r cd ll"
+                  formControlName="message"
                   placeholder="Write your message"
                   style="outline: none"
                 ></textarea>
+
+                <!-- <div
+                class="validation"
+                *ngIf="submitted && form.get('message').invalid"
+              >
+                <p *ngIf="form.get('message').errors.required">
+                  Please enter the message!
+                </p>
+               
+              </div> -->
               </div>
+
+
+             
             </div>
             <div class="np ny se sd">
               <div class="cd uk">

@@ -11,9 +11,13 @@
    @apply transition-all;
   // border: 1.5px solid #ffffff62;
     background:rgba(255, 255, 255, 0.199);
-   @apply shadow-2xl;
+   @apply shadow-xl;
    overflow: hidden;
-
+   
+&:hover{
+    @apply shadow-2xl;
+    @apply scale-110;
+}
    &::before{
         content: "";
          @apply absolute;

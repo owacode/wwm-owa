@@ -21,6 +21,8 @@ module.exports = (isProd) => ({
 
       'sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
+      'xs': {'max': '480px'},
+      // => @media (max-width: 639px) { ... }
     },
     extend: {
       colors: {

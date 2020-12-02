@@ -1,17 +1,12 @@
-.wave{
-    @apply absolute;
-    width: 100%;
-    bottom: -4px;
-    left: 0;
-    z-index: 0;
-}
+.track-content{
+    ul{
+        @apply pl-4;
+        @apply list-inside;
 
-.page-header-big{
-    padding-bottom: 20rem;
-}
+       
+    }
 
-.bullet{
-width:auto;
-    height:1.8rem;
-   transform:translateY(20%);
+    li{
+       margin-bottom: 1rem;
+    }
 }

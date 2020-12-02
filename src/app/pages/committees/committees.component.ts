@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Speakers } from 'src/app/shared/data/speakers';
 
 @Component({
   selector: 'app-committees',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommitteesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public speakersData : Speakers) { }
+
+  conferenceMembersTop:any = [];
+  conferenceMembersBottom:any= [];
+
+  advisoryMembersTop:any = [];
+  advisoryMembersBottom:any = [];
 
   ngOnInit(): void {
+    this.conferenceMembersTop = this.speakersData.data[0].slice(0,4);
+    this.conferenceMembersBottom = this.speakersData.data[1];
+
+    this.advisoryMembersTop = this.speakersData.data[7].slice(0,4);
+    this.advisoryMembersBottom = this.speakersData.data[7];
   }
+
 
 }

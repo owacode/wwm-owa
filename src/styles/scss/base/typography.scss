@@ -14,6 +14,39 @@ p{
     margin-bottom: 1rem !important;
 }
 
+h1,h2,h3,h4,h5,h6{
+   @apply font-bold;
+   @apply tracking-tight;
+}
+h1{
+   @apply text-4xl;
+   margin-bottom: 2rem;
+}
+
+h2{
+    @apply text-3xl;
+    margin-bottom: 1.5rem;
+}
+h3{
+    @apply text-2xl;
+    margin-bottom: 1rem;
+}
+h4{
+    @apply text-xl;
+    margin-bottom: 0.5rem;
+}
+.track-content{
+    ul{
+        @apply pl-4;
+        li{
+            margin-bottom: 1rem;
+            @apply font-medium;
+    
+        }
+    }
+}
+
+
 .link-gradient{
     @apply font-bold;
     @apply relative;
@@ -44,3 +77,11 @@ p{
     }
 }
 
+.validation{
+    p{
+        @apply text-red-600;
+        @apply mt-4;
+        @apply text-sm;
+
+    }
+}

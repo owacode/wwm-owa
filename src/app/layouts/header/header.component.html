@@ -1,185 +1,171 @@
+<header class="fo cd cm du hb hz hk" [class.header-transparent]="transparent">
+  <div class="max-w-7xl i_ uz pj">
+    <div class="np nw nq rm dy">
 
-  <header class="fo cd cm du hb hz hk" [class.header-transparent]="transparent">
-    <div class="max-w-7xl i_ uz pj">
-      <div class="np nw nq rm dy">
-        
-          <a class="logo"
-               routerLink="/">
-             <img src="assets/img/wwm-owa.png" alt="logo">
-              </a>
-        <nav class=" df dv">
-          <ul class="np rt n_ ny nw lg:hidden">
-            <li class="relative">
-              <a class="nav-link pb-8  cursor-pointer px-4 lg:px-2 dropdown-btn"
-                  >Tracks
-                </a>
-                  <div class="dropdown absolute w-96 bg-white p-4 rounded shadow-xl top-8 left-0">
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors"> <img src="assets/img/icons/tide.svg" class="w-8 mr-2" alt=""> Waste and WasteWater (One Water Resilience)</a>
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors"> <img src="assets/img/icons/female.svg" class="w-8 mr-2" alt=""> Women in WWM</a>
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors">  <img src="assets/img/icons/sugar-cane.svg" class="w-8 mr-2" alt=""> WWM in Agriculture</a>
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors">  <img src="assets/img/icons/sprinkler.svg" class="w-8 mr-2" alt=""> WASH (Water Sanitation and Hygiene)</a>
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors"> <img src="assets/img/icons/clean.svg" class="w-8 mr-2" alt="">Solid Waste</a>
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors">  <img src="assets/img/icons/wind-turbine.svg" class="w-8 mr-2" alt="">  Resource Recovery and Energy</a>
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors">  <img src="assets/img/icons/laptop.svg" class="w-8 mr-2" alt="">  Digital Water (IT/IoT)</a>
-                    <a routerLink="/track" class="p-2 mb-2 font-medium flex items-center hover:bg-gray-200 rounded hover:text-blue-900 transition-colors">  <img src="assets/img/icons/employment.svg" class="w-8 mr-2" alt="">  Business Groups</a>
-                  </div>
-            </li>
-            <li>
-              <a class="nav-link px-4 lg:px-2"
-              routerLink="/speakers">Speakers</a>
-            </li>
+      <a class="logo" routerLink="/">
+        <img src="assets/img/wwm-owa.png" alt="logo">
+      </a>
+      <nav class=" df dv">
+        <ul class="np rt n_ ny nw lg:hidden">
+          <li class="relative">
+            <a class="nav-link pb-8 cursor-pointer  px-4 lg:px-2 dropdown-btn">Tracks
+            </a>
+            <div class="dropdown absolute w-96 p-4 rounded shadow-xl top-8 left-0">
+              <a [routerLink]="['track/', item?.url]"
+                class="p-2 mb-2 font-medium flex items-center hover:bg-gray-900 hover:text-white rounded  transition-colors"
+                *ngFor="let item of tracks?.map"> <img [src]="item?.img" class="w-8 mr-2" [alt]="item?.title">
+                {{item?.title}}</a>
 
-            <li>
-              <a class="nav-link px-4 lg:px-2"
-              routerLink="/sponsors">Sponsors</a>
-            </li>
-            
-            <li>
-              <a class="nav-link px-4 lg:px-2"
-              routerLink="/committees">Committees</a>
-            </li>
-            <!-- <li>
-              <a class="nav-link px-4 lg:px-2"
+            </div>
+          </li>
+          <li>
+            <a class="nav-link px-4 xl:px-2 xl:text-sm" routerLink="/speakers">Speakers</a>
+          </li>
+
+          <li>
+            <a class="nav-link px-4 xl:px-2 xl:text-sm" routerLink="/sponsors">Sponsors</a>
+          </li>
+
+          <li>
+            <a class="nav-link px-4 xl:px-2" routerLink="/committees">Committees</a>
+          </li>
+          <!-- <li>
+              <a class="nav-link px-4 lg:px-2 xl:text-sm"
               routerLink="/events">Events</a>
             </li> -->
-            <li>
-              <a class="nav-link px-4 lg:px-2"
-              routerLink="/sponsor-plans">Become a sponsor</a>
-            </li>
-            <li>
-              <a class="nav-link px-4 lg:px-2"
-              routerLink="/contact">Contact</a>
-            </li>
-          </ul>
-         
-        </nav>
+          <li>
+            <a class="nav-link px-4 xl:px-2 xl:text-sm" routerLink="/sponsor-plans">Become a sponsor</a>
+          </li>
+          <li>
+            <a class="nav-link px-4 xl:px-2 xl:text-sm" routerLink="/contact">Contact</a>
+          </li>
+        </ul>
 
-        <div class="flex items-center">
-          <ul class="rt n_ ny nw ml-4 lg:mr-6">
-            <li>
-              <a class="btn btn-dark py-3" [class.btn-gradient]="!hamBlack"
-              
-                  href="signup.html"><span>Register Now</span></a>
-            </li>
-          </ul>
-          
-          <div class="np hidden lg:block">
-        
-            <button aria-controls="mobile-nav"
-            (click)="toggleMenu()"
-                 class="l ham" [class.ham-black]="hamBlack"><span class="y">Menu</span> <svg class="ci rp fj lc"
-                 viewbox="0 0 24 24"
-                 xmlns="http://www.w3.org/2000/svg">
-            <rect height="2"
-                  width="24"
-                  y="4"></rect>
-            <rect height="2"
-                  width="24"
-                  y="11"></rect>
-            <rect height="2"
-                  width="24"
-                  y="18"></rect></svg></button>
-            <nav class="fu fy rx a_ cv fp cd ua bg-white hy hz hk"
-                 id="mobile-nav"
-                 x-show="expanded">
-              <ul class="uz ub">
-                <li>
-                  <a class="np la lb ub font-medium text-black nav-link-mobile"
-                  routerLink="/">Home</a>
-                </li>
+      </nav>
 
-                
-                <!-- <li>
+      <div class="flex items-center">
+        <ul class="rt n_ ny nw ml-4 lg:mr-4">
+          <li>
+            <a class="btn btn-dark py-3 lg:text-base sm:text-sm" [class.btn-gradient]="!hamBlack"
+              routerLink="registration-india" *ngIf="location.country == 'IN'" target="_blank"><span>Register Now</span>
+            </a>
+            <a class="btn btn-dark py-3 lg:text-base sm:text-sm" [class.btn-gradient]="!hamBlack"
+            routerLink="registration-usa" *ngIf="location.country == 'US'" target="_blank"><span>Register Now</span>
+          </a>
+          <a class="btn btn-dark py-3 lg:text-base sm:text-sm" [class.btn-gradient]="!hamBlack"
+          disabled *ngIf="!location.country" target="_blank"><span>Register Now</span>
+        </a>
+          </li>
+        </ul>
+
+        <div class="country relative ml-8 lg:hidden">
+          <button class="country-btn  flex items-center" (click)="toggleDropdown()">
+            <img src="assets/img/icons/india.svg" class="w-8 mr-2" alt="IN" *ngIf="location.country == 'IN'" />
+            <img src="assets/img/icons/usa.svg" class="w-8 mr-2" alt="US" *ngIf="location.country == 'US'" />
+            <span class="country-text text-sm font-bold" [class.text-black]="transparent"
+              [class.text-white]="!transparent">
+              {{location.country}}
+            </span>
+          </button>
+          <div class="country-dropdown w-28 absolute p-2 rounded shadow-xl">
+            <button (click)="this.location.country = 'IN';toggleDropdown()"
+              class="p-1 mb-2 font-medium flex w-full items-center hover:bg-gray-900 hover:text-white rounded  transition-colors">
+              <img src="assets/img/icons/india.svg" class="w-4 mr-2" alt="IN"> IN</button>
+            <button (click)="this.location.country = 'US'; toggleDropdown()"
+              class="p-1 mb-2 font-medium flex w-full items-center hover:bg-gray-900 hover:text-white rounded  transition-colors">
+              <img src="assets/img/icons/usa.svg" class="w-4 mr-2" alt="US"> US</button>
+          </div>
+        </div>
+
+        <div class="np hidden lg:block">
+          <button aria-controls="mobile-nav" (click)="toggleMenu()" class="l ham" [class.ham-black]="hamBlack"><span
+              class="y">Menu</span> <svg class="ci rp fj lc" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect height="2" width="24" y="4"></rect>
+              <rect height="2" width="24" y="11"></rect>
+              <rect height="2" width="24" y="18"></rect>
+            </svg></button>
+          <nav class="fu fy rx a_ cv fp cd ua bg-white hy hz hk" id="mobile-nav" x-show="expanded">
+            <ul class="uz ub">
+              <li>
+                <a class="np la lb ub font-medium text-black nav-link-mobile" routerLink="/">Home</a>
+              </li>
+
+
+              <!-- <li>
                   <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/track">Tracks</a>
                 </li> -->
-                <li>
-                  <a class="np la lb ub font-medium text-black nav-link-mobile"
-                  routerLink="/speakers">Speakers</a>
-                </li>
-                <li>
-                  <a class="np la lb ub font-medium text-black nav-link-mobile"
-                  routerLink="/sponsors">Sponsors</a>
-                </li>
-                <li>
-                  <a class="np la lb ub font-medium text-black nav-link-mobile"
-                  routerLink="/committees">Committees</a>
-                </li>
-                <!-- <li>
+              <li>
+                <a class="np la lb ub font-medium text-black nav-link-mobile" routerLink="/speakers">Speakers</a>
+              </li>
+              <li>
+                <a class="np la lb ub font-medium text-black nav-link-mobile" routerLink="/sponsors">Sponsors</a>
+              </li>
+              <li>
+                <a class="np la lb ub font-medium text-black nav-link-mobile" routerLink="/committees">Committees</a>
+              </li>
+              <!-- <li>
                   <a class="np la lb ub font-medium text-black nav-link-mobile"
                   routerLink="/events">Events</a>
                 </li> -->
-                <li>
-                  <a class="np la lb ub font-medium text-black nav-link-mobile"
-                  routerLink="/sponsor-plans">Sponsor Plans</a>
-                </li>
-              
-                <li class="ub iv nu na tk">
-                  <span class="np la lb ub font-medium text-black nav-link-mobile">Tracks</span>
-                  <ul class="al">
-                    <div class="grid grid-cols-2 sm:grid-cols-1">
-                      <div>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                              routerLink="/track">
-                              <img src="assets/img/icons/tide.svg" class="w-6 mr-2" alt="">
-                              Waste and WasteWater (One Water Resilience)</a>
-                        </li>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                          routerLink="/track"> <img src="assets/img/icons/female.svg" class="w-8 mr-2" alt=""> Women in WWM</a>
-                        </li>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                               routerLink="/track"><img src="assets/img/icons/sugar-cane.svg" class="w-8 mr-2" alt=""> WWM in Agriculture</a>
-                        </li>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                               routerLink="/track"><img src="assets/img/icons/sprinkler.svg" class="w-8 mr-2" alt=""> WASH (Water Sanitation and Hygiene)</a>
-                        </li>
-                      </div>
-                      <div>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                               routerLink="/track"><img src="assets/img/icons/sugar-cane.svg" class="w-8 mr-2" alt=""> WWM in Agriculture</a>
-                        </li>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                               routerLink="/track"> <img src="assets/img/icons/clean.svg" class="w-8 mr-2" alt="">Solid Waste</a>
-                        </li>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                               routerLink="/track"> <img src="assets/img/icons/laptop.svg" class="w-8 mr-2" alt="">  Digital Water (IT/IoT)</a>
-                        </li>
-                        <li>
-                          <a class="r_ np ro la lb ub flex items-center hover:bg-gray-200 rounded px-4 hover:text-blue-900 transition-colors"
-                               routerLink="/track"> <img src="assets/img/icons/employment.svg" class="w-8 mr-2" alt="">  Business Groups</a>
-                        </li>
-                      </div>
-                    </div>
-                  
-                   
-                  </ul>
-                  
-                </li>
-                <li>
-                  <a class="np la lb ub font-medium text-black nav-link-mobile"
-                  routerLink="/contact">Contact</a>
-                </li>
-                <!-- <li>
-                  <a class="f ls j ts cd iv"
-                      href="signup.html"><span>Sign up</span> <svg class="cn rc fj lu rn sf os"
-                       viewbox="0 0 12 12"
-                       xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
-                        fill="#999"
-                        fill-rule="nonzero"></path></svg></a>
-                </li> -->
-              </ul>
-            </nav>
-          </div>
+              <li>
+                <a class="np la lb ub font-medium text-black nav-link-mobile" routerLink="/sponsor-plans">Sponsor
+                  Plans</a>
+              </li>
+
+              <li class="ub iv nu na tk">
+                <span class="np la lb ub font-medium text-black nav-link-mobile">Tracks</span>
+                <ul class="pl-0">
+                  <div class="grid grid-cols-2">
+                    <li *ngFor="let item of tracks?.map" class="sm:col-span-2">
+                      <a (click)="toggleMenu()"
+                        class="r_ np ro la lb ub flex items-center hover:bg-gray-100 rounded px-4 transition-colors"
+                        [routerLink]="['track/', item?.url]">
+                        <img [src]="item?.img" class="w-6 mr-2" [alt]="item?.title">
+                        {{item?.title}}</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a class="np la lb ub font-medium text-black nav-link-mobile" routerLink="/contact">Contact</a>
+              </li>
+            </ul>
+
+
+            <div class="flex items-center toggle-wrapper">
+              <h6
+                class="text-sm toggle__text"
+                id="toggleOffText"
+                [class.active]="location.country == 'US'"
+              >
+                USA
+              </h6>
+              <div class="toggle">
+                <label for="customToggle" class="toggle__label">
+                  <input
+                    type="checkbox"
+                    class="toggle__input"
+                    id="customToggle"
+                    hidden
+                    (change)="
+                      toggleCountry()
+                    "
+                    [checked]="location.country == 'IN'"
+                  />
+                  <div class="toggle__group">
+                    <span class="toggle__checked"></span>
+                  </div>
+                </label>
+              </div>
+              <h6 class="text-sm toggle__text" id="toggleOnText" [class.active]="location.country == 'IN'">
+                INDIA
+              </h6>
+            </div>
+
+          </nav>
         </div>
-       
       </div>
     </div>
-  </header>
+  </div>
+</header>

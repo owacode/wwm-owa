@@ -57,19 +57,26 @@
   }
 }
 
+.country-dropdown, .dropdown{
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .4),0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+}
 .dropdown{
   &:hover{
     display: block;
   }
 }
 
-header {
 
+header {
 
   &.fixed {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, 0.88);
+    
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
       0 4px 6px -2px rgba(0, 0, 0, 0.02);
 
@@ -77,6 +84,9 @@ header {
       @apply text-black;
     }
 
+    .country-text{
+      @apply text-black;
+    }
     .ham{
       rect{
         fill: #000;
@@ -103,6 +113,14 @@ header {
 .logo {
   height: 2rem;
 
+  @screen xl {
+    height: 1.8rem;
+  }
+
+  @screen sm{
+    height: 1.5rem;
+  }
+
   img {
     max-height: 100%;
     width: auto;
@@ -121,5 +139,87 @@ header {
       display:block;
       opacity: 1;
       transform: translateY(0);
+  }
+}
+
+.country-dropdown{
+  @apply transition-all;
+  top: 110%;
+  right: 0;
+  visibility: hidden;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(5%);
+
+  &.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+
+/*toggle button*/
+.toggle {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1rem;
+  &-wrapper{
+    position: fixed;
+    z-index: 1000;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  &__label {
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+
+  &__text {
+    font-weight: 800;
+    opacity: 0.42;
+   transition:all 300ms cubic-bezier(0.48, 0.01, 0.61, 0.99);
+    transition-duration: 0.2s;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__group {
+    position: relative;
+    width: 5rem;
+    height: 3rem;
+    @apply bg-blue-900;
+    border-radius: 5rem;
+    transition:all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   
+  }
+
+  &__input:checked ~ &__group {
+    @apply bg-green-700;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .toggle__checked {
+      right: 0.5rem;
+      background-image: url(/assets/img/icons/india.svg);
+    }
+  }
+
+  &__checked {
+    position: absolute;
+    top: 50%;
+    right: calc(100% - 2.5rem);
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 5rem;
+    transform: translateY(-50%);
+    background-image: url(/assets/img/icons/usa.svg);
+    transition:all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    transition-duration: 0.4s;
   }
 }

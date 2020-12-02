@@ -8,6 +8,7 @@
     &-heading{
         @apply font-bold;
         margin-bottom: 1.5rem;
+        display: inline-block;
         @apply text-xl;
         padding-bottom: 1rem;
         border-bottom: 0.2px solid rgba(255, 255, 255, 0.096);
@@ -33,4 +34,13 @@
 .copyright{
     margin-top: 4rem;
     border-top: 1px solid rgba(255, 255, 255, 0.438);
+}
+
+.social-icon{
+    filter:invert(1);
+        margin: 0 1rem;
+    
+        @screen sm{
+            margin: 0 2rem;
+        }
 }

@@ -1,1 +1,118 @@
-<p>committees works!</p>
+<section class="section page-header pb-80">
+    <div class="container">
+      <h1 class="h1 lg:text-center text-white mb-8">Committees</h1>
+      <p class="font-medium lg:text-center text-gradient lg:mx-auto max-w-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+        vitae, sed dolorum, quo reiciendis, tempora dicta recusandae accusamus
+        velit est asperiores aut porro veniam aspernatur.
+      </p>
+    </div>
+  
+    <img src="assets/img/committee-img.png" class="header-img" alt="" />
+  </section>
+  
+  <div class="px-4">
+    <div class="container bg-white rounded-2xl shadow-xl py-12 px-16 lg:px-8 md:px-4 sm:px-2 -m-28 mb-20">
+
+      <section class="pb-12 px-8">
+        <div>
+          <h2 class="h2 text-center mb-12 pb-4 border-b">Conference Committee</h2>
+  
+          <div class="grid gap-4 grid-cols-4 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+            <div class="text-center bg-white rounded-xl border p-4 transition-shadow hover:shadow-xl" *ngFor="let item of conferenceMembersTop">
+              <div class="committee-img bg-gradient mx-auto p-1 shadow-lg mb-4 w-40 h-40 rounded-full overflow-hidden">
+              <img [src]="item?.img" class="h-full w-full object-cover rounded-full" [alt]="item?.name" />
+            </div>
+            <div class="flex flex-col justify-between h-auto">
+              <h4 class="mb-2">
+                {{item?.name}}
+              </h4> 
+  
+              <p class="font-medium text-sm">
+                {{item?.position}}
+              </p>
+            </div>
+             
+            </div>
+          </div>
+          
+        </div>
+  
+        <div class="mt-6">
+  
+          <div class="grid gap-4 grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1">
+            <div class="text-center bg-white rounded-xl border p-4 transition-shadow hover:shadow-xl" *ngFor="let item of conferenceMembersBottom">
+              <div class="committee-img bg-gradient mx-auto p-1 shadow-lg mb-4 w-32 h-32 rounded-full overflow-hidden">
+              <img [src]="item?.img" class="h-full w-full object-cover rounded-full" [alt]="item?.name" />
+            </div>
+            <div class="flex flex-col justify-between h-auto">
+              <h5 class="mb-2">
+                {{item?.name}}
+              </h5> 
+  
+              <p class="font-medium text-sm">
+                {{item?.position}}
+              </p>
+            </div>
+             
+            </div>
+          </div>
+          
+        </div>
+      </section>
+  
+      <section class="section bg-gray-100 border-t border-b px-8">
+        <div>
+          <h2 class="h2 text-center mb-12 pb-4 border-b">Advisory Committee</h2>
+  
+          <div class="grid gap-4 grid-cols-4 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+            <div class="text-center bg-white rounded-xl border p-4 transition-shadow hover:shadow-xl" *ngFor="let item of advisoryMembersTop">
+              <div class="committee-img bg-gradient mx-auto p-1 shadow-lg mb-4 w-40 h-40 rounded-full overflow-hidden">
+              <img [src]="item?.img" class="h-full w-full object-cover rounded-full" [alt]="item?.name" />
+            </div>
+            <div class="flex flex-col justify-between h-auto">
+              <h4 class="mb-2">
+                {{item?.name}}
+              </h4> 
+  
+              <p class="font-medium text-sm">
+                {{item?.position}}
+              </p>
+
+
+            </div>
+             
+            </div>
+          </div>
+          
+        </div>
+  
+        <div class="mt-6">
+  
+          <div class="grid gap-4 grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1">
+            <div class="text-center bg-white rounded-xl border p-4 transition-shadow hover:shadow-xl" *ngFor="let item of advisoryMembersBottom">
+              <div class="committee-img bg-gradient mx-auto p-1 shadow-lg mb-4 w-32 h-32 rounded-full overflow-hidden">
+              <img [src]="item?.img" class="h-full w-full object-cover rounded-full" [alt]="item?.name" />
+            </div>
+            <div class="flex flex-col justify-between h-auto">
+              <h5 class="mb-2">
+                {{item?.name}}
+              </h5> 
+  
+              <p class="font-medium text-sm">
+                {{item?.position}}
+              </p>
+            </div>
+             
+            </div>
+          </div>
+          
+        </div>
+      </section>
+  
+    </div>
+  </div>
+
+
+
+

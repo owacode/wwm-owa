@@ -1,6 +1,6 @@
 <main class="rt">
   <section class="h- overflow-hidden">
-    <img src="assets/img/main-banner-2.png" class="w-full sm:hidden" alt="main banner" />
+    <img src="assets/img/landing-banner.png" class="w-full sm:hidden" alt="main banner" />
     <img src="assets/img/mobile-banner.png" class="w-full sm:block hidden" alt="main banner" />
   </section>
 
@@ -114,67 +114,17 @@
       </h2>
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-4 gap-8 xl:grid-cols-4 lg:grid-cols-3 md:gap-4 sm:grid-cols-2">
-          <div class="track-card">
-            <img src="assets/img/icons/tide.svg" alt="waste and wastewater" />
-            <p class="text-center font-bold tracking-tight mt-4">
-              Waste and WasteWater (One Water Resilience)
-            </p>
+          <div *ngFor="let item of tracks?.map">
+            <a [routerLink]="['track/', item?.url]" class="flex" style="height: 100%;">
+              <div class="track-card" >
+                <img [src]="item?.img" [alt]="item?.title" />
+                <p class="text-center font-bold tracking-tight mt-4">
+                 {{item?.title}}
+                </p>
+              </div>
+            </a>
           </div>
-          <div class="track-card">
-            <img src="assets/img/icons/female.svg" alt="Women in WWM" />
-            <p class="text-center font-bold tracking-tight mt-4">
-              Women in WWM
-            </p>
-          </div>
-          <div class="track-card">
-            <img
-              src="assets/img/icons/sugar-cane.svg"
-              alt="WWM in Agriculture"
-            />
-            <p class="text-center font-bold tracking-tight mt-4">
-              WWM in Agriculture
-            </p>
-          </div>
-          <div class="track-card">
-            <img
-              src="assets/img/icons/sprinkler.svg"
-              alt="WASH (Water Sanitation and Hygiene)"
-            />
-            <p class="text-center font-bold tracking-tight mt-4">
-              WASH (Water Sanitation and Hygiene)
-            </p>
-          </div>
-          <div class="track-card">
-            <img src="assets/img/icons/clean.svg" alt="Solid Waste" />
-            <p class="text-center font-bold tracking-tight mt-4">Solid Waste</p>
-          </div>
-       
-       
-          <div class="track-card">
-            <img
-              src="assets/img/icons/wind-turbine.svg"
-              alt="Resource Recovery and Energy"
-            />
-            <p class="text-center font-bold tracking-tight mt-4">
-              Resource Recovery and Energy
-            </p>
-          </div>
-          <div class="track-card">
-            <img
-              src="assets/img/icons/laptop.svg"
-              alt="Digital Water (IT/IoT)"
-            />
-            <p class="text-center font-bold tracking-tight mt-4">
-              Digital Water (IT/IoT)
-            </p>
-          </div>
-          <div class="track-card">
-            <img src="assets/img/icons/employment.svg" alt="Business Groups" />
-            <p class="text-center font-bold tracking-tight mt-4">
-              Business Groups
-            </p>
-          </div>
-          
+         
         </div>
       </div>
     </div>
@@ -191,7 +141,7 @@
         ></speaker>
       </div>
       <div class="text-center mt-10">
-        <button class="link-gradient">See all speakers</button>
+        <a class="link-gradient" routerLink="/speakers">See all speakers</a>
       </div>
     </div>
   </section>
@@ -209,7 +159,7 @@
       </div>
       <div class="grid items-center grid-cols-6 gap-x-12 gap-y-20 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
         <a
-          [href]="item?.link"
+        [href]="item?.link"
           class="sponsor"
           target="_blank"
           *ngFor="let item of sponsors"
@@ -218,8 +168,16 @@
           <img [src]="item?.logo" [alt]="item?.link" />
         </a>
       </div>
-      <div class="text-center mt-10">
+
+
+      <div class="grid grid-cols-2 mt-16 max-w-xl mx-auto">
+        <div class="text-center">
+          <a class="link-gradient" routerLink="/sponsors">See all sponsors</a>
+        </div>
+       <div class="text-center">
         <a class="link-gradient" routerLink="/sponsor-plans">Become a sponsor</a>
+       </div>
+       
       </div>
     </div>
   </section>
@@ -359,7 +317,7 @@
             </svg>
             <img
               class="relative w-24 h-24 z-10 shadow-lg rounded-full object-cover"
-              src="assets/img/speakers/2021/spyropoulos.jpg"
+              src="assets/img/speakers/spyropoulos.jpg"
               alt="Testimonial 01"
             />
           </div>

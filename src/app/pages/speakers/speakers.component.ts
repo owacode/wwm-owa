@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Speakers } from 'src/app/shared/data/speakers';
 
 @Component({
   selector: 'app-speakers',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpeakersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public speakers:Speakers) { }
 
   ngOnInit(): void {
+    
   }
 
 }

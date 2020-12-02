@@ -1,1 +1,109 @@
-<p>speakers works!</p>
+<section class="section page-header page-header-big">
+    <div class="container">
+      <h1 class="h1 lg:text-center text-white lg:mx-auto max-w-2xl mb-8">Our Speakers</h1>
+    </div>
+  
+    <img src="assets/img/speaker-img.png" class="header-img header-img-big" alt="" />
+
+
+    <img src="assets/img/wave.svg" alt="wave" class="wave">
+  </section>
+
+  <section class="section -mt-24">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">Water and Wastewater (One Water Resilience)</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[0]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-gray-100 border-t border-b">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">Women in WWM</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[1]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">WWM in Agriculture (Water Reuse)</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[2]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-gray-100 border-t border-b">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">WASH (Water Sanitation and Hygiene)</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[3]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">Solid Waste</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[4]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">Resource Recovery and Energy</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[5]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-gray-100 border-t border-b">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">Digital Water (IT/IoT)</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[6]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h3 class="h3 text-center mb-12">Business Groups</h3>
+
+      <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <speaker
+          [speaker]="item"
+          *ngFor="let item of speakers.data[7]"
+        ></speaker>
+      </div>
+    </div>
+  </section>
+
