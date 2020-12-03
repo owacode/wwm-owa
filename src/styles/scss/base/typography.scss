@@ -77,11 +77,20 @@ h4{
     }
 }
 
+.link-small{
+    @apply text-sm;
+    @apply font-medium;
+    &:after{
+        height: 0.1rem;
+
+    }
+}
+
 .validation{
     p{
         @apply text-red-600;
         @apply mt-4;
         @apply text-sm;
-
+        @apply py-1;
     }
 }

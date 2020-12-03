@@ -10,6 +10,9 @@
 @import './components/icons.scss';
 @import './components/glass-card.scss';
 @import './components/page-header.scss';
+@import "../vendors/sweetalert2.css";
+@import "./components/modals.scss";
+@import "./components/sweet-alert.scss";
 
 .sponsor{
     img{

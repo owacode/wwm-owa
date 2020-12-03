@@ -107,7 +107,6 @@
   </section>
   
     <section class="section bg-gradient">
-     
       <div class="container">
       <h2 class="h2 text-white mb-8 text-center">
         Tracks of the conference
@@ -136,6 +135,7 @@
 
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
+          (signalModal)="openSpeakerModal($event)"
           [speaker]="item"
           *ngFor="let item of speakers | slice: 0:4"
         ></speaker>
@@ -165,7 +165,7 @@
           *ngFor="let item of sponsors"
           [title]="item?.link"
         >
-          <img [src]="item?.logo" [alt]="item?.link" />
+          <img [defaultImage]="'assets/img/image.svg'" [lazyLoad]="item?.logo" [alt]="item?.link" />
         </a>
       </div>
 
@@ -343,7 +343,7 @@
         </div>
 
         <div class="text-center mt-0 mb-8">
-          <button class="link-gradient text-sm">Read more</button>
+          <button (click)="ui.openModal('#bigModal')" class="link-gradient text-sm">Read more</button>
         </div>
 
       </div>
@@ -452,3 +452,40 @@
   </section>
 </main>
 
+<div class="modal modal-lg" id="bigModal">
+  <div class="modal-content">
+    <div class="modal-close" (click)="ui.closeModal('#bigModal')">
+      <i class="material-icons">cancel</i>
+    </div>
+    <div class="text-center">
+      <img class="mx-auto w-32 h-32 bg-white rounded-full p-2 shadow-lg mb-4 object-cover" src="assets/img/speakers/spyropoulos.jpg" />
+    </div>
+  
+    <h3 class="h3 text-center mb-4">
+      Mariyana T. Spyropoulos
+    </h3>
+  
+    <p class="text-center pb-4 border-b text-sm">
+      MWRDGC, Chairperson of the Conference and Expo
+    </p>
+  
+  
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae distinctio blanditiis obcaecati suscipit, exercitationem quam eum corporis magni nobis officiis praesentium enim repudiandae eligendi vel quod cumque illo dolores qui numquam debitis laboriosam non! Est non dolorem dolores sed beatae iusto! Sit magni libero atque aspernatur fugiat corrupti. Laudantium voluptatem quaerat ipsa ad quia!
+      </p>
+  
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae distinctio blanditiis obcaecati suscipit, exercitationem quam eum corporis magni nobis officiis praesentium enim repudiandae eligendi vel quod cumque illo dolores qui numquam debitis laboriosam non! Est non dolorem dolores sed beatae iusto! Sit magni libero atque aspernatur fugiat corrupti. Laudantium voluptatem quaerat ipsa ad quia!
+      </p>
+  
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae distinctio blanditiis obcaecati suscipit, exercitationem quam eum corporis magni nobis officiis praesentium enim repudiandae eligendi vel quod cumque illo dolores qui numquam debitis laboriosam non! Est non dolorem dolores sed beatae iusto! Sit magni libero atque aspernatur fugiat corrupti. Laudantium voluptatem quaerat ipsa ad quia!
+      </p>
+    </div>
+  </div>
+
+
+</div>
+
+<speaker-modal [speaker]="currentSpeaker"></speaker-modal>

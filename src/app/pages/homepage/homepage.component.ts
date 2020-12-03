@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Speakers } from 'src/app/shared/data/speakers';
 import { Sponsors } from 'src/app/shared/data/sponsors';
 import { TrackMaps } from 'src/app/shared/data/tracks-map';
+import { UIFunctions } from 'src/app/shared/functions/ui';
 import { LocationService } from 'src/app/shared/services/location.service';
+declare var $:any;
 
 @Component({
   selector: 'app-homepage',
@@ -13,8 +15,8 @@ export class HomepageComponent implements OnInit {
 
   speakers:any = [];
   sponsors:any = [];
-  
-  constructor(public speakersData:Speakers, public sponsorsData: Sponsors, public tracks:TrackMaps, public location:LocationService) { }
+  currentSpeaker:any;
+  constructor(public speakersData:Speakers, public sponsorsData: Sponsors, public tracks:TrackMaps, public location:LocationService, public ui:UIFunctions) { }
 
   ngOnInit(): void {
     if(!this.location.country){
@@ -56,5 +58,12 @@ export class HomepageComponent implements OnInit {
       }
     })
   }
+
+  openSpeakerModal(speaker:any){
+    this.currentSpeaker = speaker;
+    this.ui.openModal('#speakerModal');
+  }
+
+
 
 }

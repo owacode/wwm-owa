@@ -618,9 +618,7 @@ input[type="range"]::-moz-focus-outer {
 .form-switch input[type="checkbox"]:checked + label > span:first-child {
   left: 34px;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 .f:focus,
 .a:focus,
 :focus,

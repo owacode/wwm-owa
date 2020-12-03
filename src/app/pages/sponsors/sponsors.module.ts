@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SponsorsComponent } from './sponsors.component';
 import { Routes, RouterModule } from '@angular/router';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
   declarations: [SponsorsComponent],
   imports: [
     CommonModule,
+    LazyLoadImageModule,
     RouterModule.forChild(routes)
   ]
 })

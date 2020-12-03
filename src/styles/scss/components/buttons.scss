@@ -5,7 +5,7 @@
     @apply bg-blue-600;
     @apply text-white;
     @apply font-semibold;
-    @apply transition-colors;
+    @apply transition-all;
     @apply inline-block;
     @apply text-center;
     &-dark{
@@ -18,5 +18,10 @@
 
 &-gradient{
     background: linear-gradient(to right, $color-primary, $color-secondary);
+    background-size: calc(100% + 50px) ;
+    transition: 0.3s all;
+    &:hover{
+        background-position:100%;
+    }
 }
 }

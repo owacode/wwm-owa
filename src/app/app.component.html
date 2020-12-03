@@ -1,4 +1,6 @@
 
 <app-header [transparent]="transparent" [hamBlack]="hamBlack"></app-header>
 <router-outlet></router-outlet>
+<div class="modal-overlay" (click)="closeAllModals()"></div>
+<loading-screen *ngIf="loading"></loading-screen>
 <app-footer></app-footer>

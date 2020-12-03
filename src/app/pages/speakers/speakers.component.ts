@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Speakers } from 'src/app/shared/data/speakers';
+import { UIFunctions } from 'src/app/shared/functions/ui';
 
 @Component({
   selector: 'app-speakers',
@@ -8,10 +9,17 @@ import { Speakers } from 'src/app/shared/data/speakers';
 })
 export class SpeakersComponent implements OnInit {
 
-  constructor(public speakers:Speakers) { }
+  currentSpeaker:any;
+
+  constructor(public speakers:Speakers,public ui:UIFunctions) { }
 
   ngOnInit(): void {
     
+  }
+
+  openSpeakerModal(speaker:any){
+    this.currentSpeaker = speaker;
+    this.ui.openModal('#speakerModal');
   }
 
 }

@@ -1,0 +1,52 @@
+<div class="modal" id="speakerModal">
+    <div class="modal-content">
+      <div class="modal-close" (click)="ui.closeModal('#speakerModal')">
+        <i class="material-icons">cancel</i>
+      </div>
+      <div class="text-center">
+        <img class="mx-auto w-32 h-32 bg-white rounded-full p-1 shadow-xl mb-4 object-cover" 
+        [defaultImage]="'assets/img/user.svg'" [lazyLoad]="speaker?.img"
+        [alt]="speaker?.name" />
+      </div>
+    
+      <h3 class="h3 text-center mb-2">
+       {{speaker?.name}}
+      </h3>
+    
+      <p class="text-center text-sm">
+       {{ speaker?.position}}
+      </p>
+
+      <div class="flex justify-between py-4 border-b mb-4 border-gray-500 ">
+
+        <div class="flex justify-center items-center">
+          <img src="assets/img/icons/india.svg" class="w-6 mr-2 block" alt="indian" *ngIf="speaker?.country === 'IN'">
+          <img src="assets/img/icons/usa.svg" class="w-6 mr-2 block" alt="american" *ngIf="speaker?.country === 'US'">
+          <h6>
+            Speaker
+          </h6>
+        </div>
+        <a class="mx-2 font-semibold text-gray-600" href="#0">
+          <img src="assets/img/icons/icons8-linkedin.svg" class="icon-text -mt-1" alt="twitter">
+            LinkedIn</a>
+          
+      </div>
+    
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae distinctio blanditiis obcaecati suscipit, exercitationem quam eum corporis magni nobis officiis praesentium enim repudiandae eligendi vel quod cumque illo dolores qui numquam debitis laboriosam non! Est non dolorem dolores sed beatae iusto! Sit magni libero atque aspernatur fugiat corrupti. Laudantium voluptatem quaerat ipsa ad quia!
+        </p>
+    
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae distinctio blanditiis obcaecati suscipit, exercitationem quam eum corporis magni nobis officiis praesentium enim repudiandae eligendi vel quod cumque illo dolores qui numquam debitis laboriosam non! Est non dolorem dolores sed beatae iusto! Sit magni libero atque aspernatur fugiat corrupti. Laudantium voluptatem quaerat ipsa ad quia!
+        </p>
+    
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae distinctio blanditiis obcaecati suscipit, exercitationem quam eum corporis magni nobis officiis praesentium enim repudiandae eligendi vel quod cumque illo dolores qui numquam debitis laboriosam non! Est non dolorem dolores sed beatae iusto! Sit magni libero atque aspernatur fugiat corrupti. Laudantium voluptatem quaerat ipsa ad quia!
+        </p>
+      </div>
+    </div>
+  
+  </div>
+
+

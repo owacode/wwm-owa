@@ -24,7 +24,7 @@
           *ngFor="let item of sponsors"
           [title]="item?.link"
         >
-          <img [src]="item?.logo" [alt]="item?.link" />
+          <img [defaultImage]="'assets/img/image.svg'" [lazyLoad]="item?.logo" [alt]="item?.link" />
         </a>
       </div>
       <div class="text-center mt-10">

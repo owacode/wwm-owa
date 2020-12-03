@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Injectable({
     providedIn: 'root'
@@ -23,9 +24,33 @@ export class LocationService {
                 })
                 .catch(err => {
                     reject(err);
+                    this.setLocation();
                 })
              })
         })
+    }
+
+    public setLocation(){
+        Swal.fire({
+            title: 'Please select your country to get started',
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: `USA`,
+            denyButtonText: `India`,
+            allowOutsideClick:false,
+            allowEscapeKey: false,
+            imageUrl: 'assets/img/icons/planet.svg',
+            imageWidth: 100,
+            imageHeight: 100,
+            imageAlt: 'Select Country',
+          }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+             this.country = 'USA';
+            } else if (result.isDenied) {
+                this.country = 'IN';
+            }
+          })
     }
 
 

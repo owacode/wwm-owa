@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SpeakersComponent } from './speakers.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SpeakerModule } from 'src/app/components/speaker/speaker.module';
+import { SpeakerModalModule } from 'src/app/components/speaker-modal/speaker-modal.module';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SpeakerModule,
+    SpeakerModalModule,
     RouterModule.forChild(routes)
   ]
 })

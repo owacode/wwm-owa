@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Speakers } from 'src/app/shared/data/speakers';
 import { Tracks } from 'src/app/shared/data/tracks';
 import { TrackMaps } from 'src/app/shared/data/tracks-map';
+import { UIFunctions } from 'src/app/shared/functions/ui';
 
 @Component({
   selector: 'app-track-page',
@@ -15,8 +16,9 @@ export class TrackPageComponent implements OnInit {
   trackTitle = '';
   trackContent: any;
   trackIndex:number = 0;
+  currentSpeaker:any;
 
-  constructor(public speakersData: Speakers, public route: ActivatedRoute, public trackMaps: TrackMaps, public tracksData: Tracks) { }
+  constructor(public speakersData: Speakers, public route: ActivatedRoute, public trackMaps: TrackMaps, public tracksData: Tracks, public ui:UIFunctions) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((res: any) => {
@@ -32,6 +34,9 @@ export class TrackPageComponent implements OnInit {
     });
   }
 
-
+  openSpeakerModal(speaker:any){
+    this.currentSpeaker = speaker;
+    this.ui.openModal('#speakerModal');
+  }
 
 }

@@ -1,45 +1,83 @@
-.modal{
-    padding:2rem;
-    animation: fade_up 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); 
-    &-dialog{
-        margin: 0 auto;
+.modal {
+    backdrop-filter: blur(35px) ;
+    -webkit-backdrop-filter: blur(35px) ;
+    background: rgba(255, 255, 255, 0.6) ;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.4), 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+        0 4px 6px -2px rgba(0, 0, 0, 0.02) ;
+    border-radius: 1rem ;
+    max-width: 35rem;
+    padding: 2rem 1rem;
+    width: 95% ;
+    @apply fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    z-index: 3000;
+    animation: fade_in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transform: translate(-50%, -50%);
+
+    &.show {
+        display: block !important;
     }
-    &-content{
-        box-shadow: 0 1rem 2.4rem $card-shadow-color-1;
-        border-radius: 2rem;
-        background: linear-gradient(180deg, $color-white,$color-light-gray-1);
-        padding: 1.5rem 2rem;
-        border:none;
-        animation: modal_show 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 
+    &-lg {
+        max-width: 55rem;
+    }
+    
+
+    &-content {
+        padding: 2rem 1rem;
+        max-height: 70vh;
+        overflow-y: scroll;
+
+          /* width */
+    &::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 1rem;
     }
 
-    &-backdrop{
-    opacity:0.98 !important;
-    background-color: #D2D2D2;
-}
-    &-title{
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 800;
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #ccc;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
 
-        @include responsive(sm){
-            font-size: 2.2rem;
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #222;
+        border-radius: 1rem;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #000;
+    }
+    }
+   
+    &-close {
+        @apply p-2;
+        @apply absolute;
+        top: 0.62rem;
+        right: 1.2rem;
+        @apply cursor-pointer;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    &-overlay {
+        @apply fixed;
+        @apply inset-0;
+        @apply h-full;
+        @apply w-full;
+        @apply flex;
+        background:linear-gradient(to bottom right, $color-primary, $color-secondary);
+        opacity: 0.9;
+        z-index: 2500;
+        animation: fade_in 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+        display: none;
+        &.show{
+            display: block;
         }
-
-        @include responsive(xs){
-            font-size: 2.4rem;
-        }
-    }
-    .close{
-        background-color: transparent;
-        color: $color-black;
     }
 }
 
-
-// .dash{
-//     .modal{
-//         font-family: Nunito Sans;
-//     }
-// }

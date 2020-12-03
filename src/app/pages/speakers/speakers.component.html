@@ -16,6 +16,7 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[0]"
         ></speaker>
       </div>
@@ -28,6 +29,7 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[1]"
         ></speaker>
       </div>
@@ -40,6 +42,7 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[2]"
         ></speaker>
       </div>
@@ -52,6 +55,7 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[3]"
         ></speaker>
       </div>
@@ -64,6 +68,7 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[4]"
         ></speaker>
       </div>
@@ -77,6 +82,7 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[5]"
         ></speaker>
       </div>
@@ -89,6 +95,7 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[6]"
         ></speaker>
       </div>
@@ -101,9 +108,11 @@
       <div class="grid grid-cols-4 gap-6 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <speaker
           [speaker]="item"
+           (signalModal)="openSpeakerModal($event)"
           *ngFor="let item of speakers.data[7]"
         ></speaker>
       </div>
     </div>
   </section>
 
+  <speaker-modal [speaker]="currentSpeaker"></speaker-modal>
