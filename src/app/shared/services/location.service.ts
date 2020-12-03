@@ -23,8 +23,8 @@ export class LocationService {
                  resolve(res);
                 })
                 .catch(err => {
-                    reject(err);
                     this.setLocation();
+                    reject(err);
                 })
              })
         })
